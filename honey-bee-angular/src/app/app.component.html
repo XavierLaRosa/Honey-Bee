@@ -1,33 +1,52 @@
-<div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-  <div class="sm:flex sm:items-center px-6 py-4">
-    <div
-      class="flex items-center justify-center sm:flex-col sm:w-24 sm:border sm:border-gray-500 sm:rounded-full"
+<!-- <div class="absolute inset-0 z-negative lg:opacity-100 opacity-50">
+  <video
+    src="https://vod-progressive.akamaized.net/exp=1580773205~acl=%2A%2F1212071806.mp4%2A~hmac=1d90e58d286a9b4a3d720a75908d425491056d9ad52531be251fe5367aa65779/vimeo-prod-skyfire-std-us/01/2834/12/314172230/1212071806.mp4"
+    autoplay
+    muted
+    loop
+    class="object-cover w-full h-full"
+  ></video>
+</div> -->
+<div
+  class="w-screen h-screen flex flex-grow flex-col justify-center items-center"
+>
+  <div class="bg-gray-300 w-6/12 h-auto p-4 flex shadow">
+    <select
+      name="Radius"
+      id=""
+      class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
     >
-      <img
-        class="block sm:mx-auto mx-0 flex-shrink-0 h-16 sm:h-12"
-        src="https://angular.io/assets/images/logos/angular/angular.svg"
-        alt="Angular Logo"
-      />
-      <img
-        class="block sm:mx-auto mx-0 flex-shrink-0 h-16 sm:h-12"
-        src="https://tailwindcss.com/android-chrome-512x512.png"
-        alt="Tailwind CSS Logo"
-      />
-    </div>
-
-    <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
-      <p class="text-xl leading-tight">Tailwind CSS & Angular CLI</p>
-      <p class="text-sm leading-tight text-gray-600">
-        With custom webpack configuration!
-      </p>
-      <div class="mt-4">
-        <button
-          class="text-purple-500 hover:text-white hover:bg-purple-500 border border-purple-500 text-xs font-semibold rounded-full px-4 py-1 leading-normal"
-        >
-          GO
-        </button>
-      </div>
-    </div>
+      <option value="none">none</option>
+      <option value="5">5 miles</option>
+      <option value="10">10 miles</option>
+      <option value="15">15 miles</option>
+      <option value="20">20 miles</option>
+      <option value="25">25 miles</option>
+    </select>
+    <select
+      name="Sort Type"
+      id=""
+      class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+    >
+      <option value="name">name</option>
+      <option value="relevance">relevance</option>
+      <option value="distance">distance</option>
+    </select>
+    <select
+      name="Sort Direction"
+      id=""
+      class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+    >
+      <option value="asc">ascending</option>
+      <option value="desc">descending</option>
+    </select>
+    <input class="m-2 px-2" type="text" placeholder="zipcode" />
+    <input class="m-2 px-2" type="text" placeholder="event keyword" />
+    <button
+      class="bg-yellow-400 px-4 py-2 m-2 rounded text-yellow-900 shadow hover:bg-yellow-500"
+    >
+      Search
+    </button>
   </div>
 </div>
 
