@@ -66,12 +66,12 @@
 
   <div
     *ngIf="!emptyQuery(queryResponseLength)"
-    class="event-window w-10/12 flex flex-row flex-wrap justify-center"
+    class="event-window w-10/12 m-4 flex flex-row flex-wrap justify-center"
   >
     <app-event-tile
       *ngFor="let event of queryResponse"
       [event]="event"
-      [className]="'m-2'"
+      [className]="'m-2 w-3/12'"
     ></app-event-tile>
   </div>
 

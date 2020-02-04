@@ -1,25 +1,38 @@
 <div
-  class="event-tile bg-gray-100 text-gray-900 hover:shadow-lg hover:bg-gray-200 w-64 h-auto rounded shadow"
+  class="event-tile bg-gray-100 text-gray-900 hover:shadow-lg hover:bg-gray-200 w-full h-auto rounded shadow"
 >
   <a href="{{ event.url }}" target="_blank" class="w-full h-full">
-    <h2 class="w-full bg-yellow-300 rounded text-left p-2">
+    <h2 class="w-full bg-yellow-400 rounded-t text-left text-2xl py-2 px-4">
       {{ event["name"] }}
     </h2>
-    <p class="text-left p-2">
-      Genre: {{ event["classifications"][0]["genre"]["name"] }}
-    </p>
-    <p class="text-left p-2">
-      Segment:
-      {{ event["classifications"][0]["segment"]["name"] }}
-    </p>
-    <!-- <p class="text-left p-2">
-      Ticket Limit:
-      {{ event.ticketLimit["info"] }}
-    </p> -->
-
-    <p class="text-left p-2">
-      Location:
-      {{ event["_embedded"]["venues"][0]["name"] }}
-    </p>
+    <div class="w-full py-2 px-4">
+      <p class="text-left">
+        Location:
+        <a
+          href="{{ event['_embedded']['venues'][0]['url'] }}"
+          class="text-left text-blue-500 hover:text-blue-700 hover:underline"
+          target="_blank"
+        >
+          {{ event["_embedded"]["venues"][0]["name"] }}
+        </a>
+      </p>
+      <p class="text-left">
+        {{ event["dates"]["start"]["localDate"] }}
+      </p>
+      <p class="text-left">
+        from ${{ event["priceRanges"][0]["min"] }} to ${{
+          event["priceRanges"][0]["max"]
+        }}
+        {{ event["priceRanges"][0]["currency"] }}
+      </p>
+      <img src="{{ event['images'][0]['url'] }}" class="w-full" alt="" />
+      <p class="text-left">
+        Genre: {{ event["classifications"][0]["genre"]["name"] }}
+      </p>
+      <p class="text-left">
+        Segment:
+        {{ event["classifications"][0]["segment"]["name"] }}
+      </p>
+    </div>
   </a>
 </div>
