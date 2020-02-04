@@ -15,6 +15,7 @@
       name="Radius"
       id=""
       class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+      #radiusInput
     >
       <option value="none">none</option>
       <option value="5">5 miles</option>
@@ -27,6 +28,7 @@
       name="Sort Type"
       id=""
       class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+      #typeInput
     >
       <option value="name">name</option>
       <option value="relevance">relevance</option>
@@ -36,17 +38,27 @@
       name="Sort Direction"
       id=""
       class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+      #directionInput
     >
       <option value="asc">ascending</option>
       <option value="desc">descending</option>
     </select>
-    <input class="m-2 px-2" type="text" placeholder="zipcode" />
-    <input class="m-2 px-2" type="text" placeholder="event keyword" />
+    <input class="m-2 px-2" type="text" placeholder="zipcode" #zipcodeInput />
+    <input
+      class="m-2 px-2"
+      type="text"
+      placeholder="event keyword"
+      #keywordInput
+    />
     <button
+      (click)="open($event)"
       class="bg-yellow-400 px-4 py-2 m-2 rounded text-yellow-900 shadow hover:bg-yellow-500"
     >
       Search
     </button>
+  </div>
+  <div class="bg-gray-100 text-color-gray-800 m-2 p-4 w-10/12 h-auto">
+    <a href="{{ queryResponse }}">{{ queryResponse }}</a>
   </div>
 </div>
 
