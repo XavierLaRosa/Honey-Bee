@@ -2,8 +2,7 @@ import { Component, Input, ViewChild, ElementRef } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 var basicURL =
-  "https://app.ticketmaster.com/discovery/v2/events.json?apikey=rZ4yI3gTU9m0uGoNlRHDvNV6ErKfcQYs";
-
+  "https://app.ticketmaster.com/discovery/v2/events?apikey=rZ4yI3gTU9m0uGoNlRHDvNV6ErKfcQYs&locale=*";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -27,7 +26,7 @@ export class AppComponent {
   constructor(private http: HttpClient) {}
 
   public open(event: Event) {
-    this.sort = "&sort=".concat(this.typeInput, ",", this.directionInput);
+    //this.sort = "&sort=".concat(this.typeInput, ",", this.directionInput);
     if (this.radiusInput != "none") {
       console.log("caught rad");
       this.radius = "&radius=".concat(this.radiusInput);
@@ -49,7 +48,7 @@ export class AppComponent {
         basicURL.concat(this.zipcode, this.keyword, this.radius, this.sort)
       );
 
-      this.queryResponeLength = response["page"]["totalElements"];
+      this.queryResponeLength = response["page"]["size"];
       if (this.queryResponeLength == 0) {
       } else {
         this.queryResponse = response["_embedded"]["events"];

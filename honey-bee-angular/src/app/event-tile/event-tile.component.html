@@ -1,6 +1,10 @@
-<div class="bg-gray-100 text-gray-900 w-full h-auto rounded shadow">
+<div
+  class="event-tile bg-gray-100 text-gray-900 hover:shadow-lg hover:bg-gray-200 w-64 h-auto rounded shadow"
+>
   <a href="{{ event.url }}" target="_blank" class="w-full h-full">
-    <h2 class="text-left p-2">{{ event["name"] }}</h2>
+    <h2 class="w-full bg-yellow-300 rounded text-left p-2">
+      {{ event["name"] }}
+    </h2>
     <p class="text-left p-2">
       Genre: {{ event["classifications"][0]["genre"]["name"] }}
     </p>

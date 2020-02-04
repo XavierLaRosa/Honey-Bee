@@ -1,21 +1,15 @@
-<!-- <div class="absolute inset-0 z-negative lg:opacity-100 opacity-50">
-  <video
-    src="https://vod-progressive.akamaized.net/exp=1580773205~acl=%2A%2F1212071806.mp4%2A~hmac=1d90e58d286a9b4a3d720a75908d425491056d9ad52531be251fe5367aa65779/vimeo-prod-skyfire-std-us/01/2834/12/314172230/1212071806.mp4"
-    autoplay
-    muted
-    loop
-    class="object-cover w-full h-full"
-  ></video>
-</div> -->
 <div
   class="w-screen h-screen flex flex-grow flex-col justify-center items-center"
 >
-  <div class="bg-gray-300 w-auto h-auto p-4 flex shadow">
+  <div class="flex flex-col items-center">
+    <h1 class="text-center text-gray-100 text-5xl">Find your next event</h1>
+  </div>
+  <div class="bg-gray-300 w-auto h-auto p-4 flex shadow rounded-sm">
     <select
       [(ngModel)]="radiusInput"
       name="Radius"
       id=""
-      class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+      class="m-2 px-2 block bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
     >
       <option value="none">none</option>
       <option value="5">5 miles</option>
@@ -28,7 +22,7 @@
       [(ngModel)]="typeInput"
       name="Sort Type"
       id=""
-      class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+      class="m-2 px-2 block bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
     >
       <option value="name">name</option>
       <option value="relevance">relevance</option>
@@ -38,7 +32,7 @@
       [(ngModel)]="directionInput"
       name="Sort Direction"
       id=""
-      class="m-2 px-2 block appearance-none bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
+      class="m-2 px-2 block bg-gray-200 border border-gray-200 text-gray-700 rounded focus:outline-none focus:bg-gray-100 focus:border-gray-500"
     >
       <option value="asc">ascending</option>
       <option value="desc">descending</option>
