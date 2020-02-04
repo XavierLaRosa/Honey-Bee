@@ -88,17 +88,21 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    // let headers = new HttpHeaders().set(
-    //   "Authorization",
-    //   "563492ad6f91700001000001960d404e870a4a568d7abc872cdfbab5"
-    // );
-    // let obs = this.http.get(
-    //   "https://api.pexels.com/videos/search?query=party&per_page=15&page=1",
-    //   { headers }
-    // );
-    // obs.subscribe(response => {
-    //   console.log(response["videos"][0]["video_files"][0]["link"]);
-    //   this.imgUrl = response["videos"][0]["video_files"][0]["link"];
-    // });
+    let headers = new HttpHeaders().set(
+      "Authorization",
+      "563492ad6f91700001000001960d404e870a4a568d7abc872cdfbab5"
+    );
+    let randomPage = Math.floor(Math.random() * 999);
+    var page = "&page=".concat(String(randomPage));
+    let obs = this.http.get(
+      "https://api.pexels.com/v1/search?query=party&per_page=1&min_width=1920&max_width=2300".concat(
+        page
+      ),
+      { headers }
+    );
+    obs.subscribe(response => {
+      console.log(response["photos"][0]["src"]["original"]);
+      this.imgUrl = response["photos"][0]["src"]["original"];
+    });
   }
 }
