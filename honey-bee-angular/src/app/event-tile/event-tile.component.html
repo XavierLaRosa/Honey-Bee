@@ -1,5 +1,21 @@
-<div class="bg-gray-100 text-gray-900 w-full h-auto m-2 rounded">
+<div class="bg-gray-100 text-gray-900 w-full h-auto rounded shadow">
   <a href="{{ event.url }}" target="_blank" class="w-full h-full">
     <h2 class="text-left p-2">{{ event.name }}</h2>
+    <p class="text-left p-2">
+      Genre: {{ event.classifications[0]["genre"]["name"] }}
+    </p>
+    <p class="text-left p-2">
+      Segment:
+      {{ event.classifications[0]["segment"]["name"] }}
+    </p>
+    <!-- <p class="text-left p-2">
+      Ticket Limit:
+      {{ event.ticketLimit["info"] }}
+    </p> -->
+
+    <p class="text-left p-2">
+      Location:
+      {{ event._embedded["venues"][0]["name"] }}
+    </p>
   </a>
 </div>

@@ -63,12 +63,13 @@ export class AppComponent {
     obs.subscribe(response => {
       console.log(response);
       console.log(basicURL.concat(zipcode, keyword, sort));
-      this.queryResponse = response["_embedded"]["venues"];
+      this.queryResponse = response["_embedded"]["events"];
+      console.log("query object: " + this.queryResponse);
     });
   }
 }
 
 var basicURL =
-  "https://app.ticketmaster.com/discovery/v2/venues.json?apikey=rZ4yI3gTU9m0uGoNlRHDvNV6ErKfcQYs";
+  "https://app.ticketmaster.com/discovery/v2/events.json?apikey=rZ4yI3gTU9m0uGoNlRHDvNV6ErKfcQYs";
 var testURL =
-  "https://app.ticketmaster.com/discovery/v2/venues.json?postalCode=07054&keyword=comedy&apikey=rZ4yI3gTU9m0uGoNlRHDvNV6ErKfcQYs&radius=5&sort=name,asc";
+  "https://app.ticketmaster.com/discovery/v2/events.json?postalCode=07054&keyword=comedy&apikey=rZ4yI3gTU9m0uGoNlRHDvNV6ErKfcQYs&radius=5&sort=name,asc";

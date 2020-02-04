@@ -5,3 +5,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.event-window {
+  overflow-y: scroll;
+  height: 60%;
+}

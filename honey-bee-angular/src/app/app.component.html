@@ -58,11 +58,11 @@
     </button>
   </div>
 
-  <div class="flex flex-row flex-wrap justify-center">
+  <div class="event-window w-10/12 flex flex-row flex-wrap justify-center">
     <app-event-tile
       *ngFor="let event of queryResponse"
       [event]="event"
-      [className]="'m-2 w-2/12'"
+      [className]="'m-2'"
     ></app-event-tile>
   </div>
 </div>
