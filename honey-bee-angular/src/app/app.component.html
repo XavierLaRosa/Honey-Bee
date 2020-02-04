@@ -1,11 +1,16 @@
 <div
   class="honey-bee-screen w-screen h-screen flex flex-grow flex-col justify-center items-center"
   [ngStyle]="{ 'background-image': 'url(' + imgUrl + ')' }"
+  *ngIf="rendered"
 >
   <div class="flex flex-col items-center">
-    <h1 class="text-center text-gray-100 text-5xl">Find your next event</h1>
+    <h1 class="text-center text-gray-100 text-5xl">
+      Find your next event
+    </h1>
   </div>
-  <div class="bg-gray-300 w-auto h-auto p-4 flex shadow rounded-sm">
+  <div
+    class="bg-gray-300 w-auto h-auto p-4 flex flex-col sm:flex-col md:flex-col lg:flex-row shadow rounded-sm"
+  >
     <select
       [(ngModel)]="radiusInput"
       name="Radius"
@@ -66,12 +71,12 @@
 
   <div
     *ngIf="!emptyQuery(queryResponseLength)"
-    class="event-window w-10/12 m-4 flex flex-row flex-wrap justify-center"
+    class="event-window lg:w-10/12 md:w-12/12 m-4 flex flex-row flex-wrap justify-center"
   >
     <app-event-tile
       *ngFor="let event of queryResponse"
       [event]="event"
-      [className]="'m-2 w-3/12'"
+      [className]="'m-2 lg:w-3/12 md:w-12/12'"
     ></app-event-tile>
   </div>
 

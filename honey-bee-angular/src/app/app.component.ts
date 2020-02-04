@@ -9,6 +9,7 @@ var basicURL =
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
+  rendered = false;
   keywordInput: string = "";
   zipcodeInput: string = "";
   radiusInput: string = "none";
@@ -103,6 +104,7 @@ export class AppComponent {
     obs.subscribe(response => {
       console.log(response["photos"][0]["src"]["original"]);
       this.imgUrl = response["photos"][0]["src"]["original"];
+      this.rendered = true;
     });
   }
 }
