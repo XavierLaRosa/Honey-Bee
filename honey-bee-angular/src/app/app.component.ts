@@ -63,7 +63,7 @@ export class AppComponent {
     obs.subscribe(response => {
       console.log(response);
       console.log(basicURL.concat(zipcode, keyword, sort));
-      this.queryResponse = response["_embedded"]["venues"][0]["url"];
+      this.queryResponse = response["_embedded"]["venues"];
     });
   }
 }

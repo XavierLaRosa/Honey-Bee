@@ -57,8 +57,9 @@
       Search
     </button>
   </div>
-  <div class="bg-gray-100 text-color-gray-800 m-2 p-4 w-10/12 h-auto">
-    <a href="{{ queryResponse }}">{{ queryResponse }}</a>
+
+  <div class="flex flex-row flex-wrap">
+    <app-event-tile *ngFor="let event of queryResponse"></app-event-tile>
   </div>
 </div>
 
