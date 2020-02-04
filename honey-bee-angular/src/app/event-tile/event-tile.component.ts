@@ -7,18 +7,16 @@ import { Event } from "../event.model";
   styleUrls: ["./event-tile.component.css"]
 })
 export class EventTileComponent implements OnInit {
-  @Input() event: Event;
+  @Input() event: object;
   constructor() {}
 
   ngOnInit() {
-    this.event.classifications[0]["segment"]["name"] != "Undefined"
-      ? console.log("caught")
-      : (this.event.classifications[0]["segment"]["name"] = "");
-
-    this.event.classifications[0]["genre"]["name"] != "Undefined"
-      ? console.log("caught")
-      : (this.event.classifications[0]["genre"]["name"] = "");
-
+    // this.event.classifications[0]["segment"]["name"] != "Undefined"
+    //   ? console.log("caught")
+    //   : (this.event.classifications[0]["segment"]["name"] = "");
+    // this.event.classifications[0]["genre"]["name"] != "Undefined"
+    //   ? console.log("caught")
+    //   : (this.event.classifications[0]["genre"]["name"] = "");
     // this.event.ticketLimit["info"] != null
     //   ? console.log("caught")
     //   : (this.event.ticketLimit["info"] = "");
