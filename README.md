@@ -5,7 +5,7 @@
 
 ## Basic Overview
 
-This is a web application that gives users the ability to quickly look up events happening around them using the Ticketmaster API.
+This is a web application that gives users the ability to quickly look up events happening around them using the Ticketmaster API. For styling, the background image is a random "party" photo generated from the Pexels API.
 This application is also used to practice skills with RESTful APIs, data handling in Angular, Tailwind CSS styling for Mobile Friendly UI.
 
 <p align="center"><img width=95% src="https://github.com/XavierLaRosa/Honey-Bee/blob/master/demo/honey-bee.gif"></p>
@@ -31,6 +31,7 @@ This application is also used to practice skills with RESTful APIs, data handlin
 - Angular Framework
 - Tailwind CSS
 - Ticketmaster API
+- Pexel API
 - Postman
 - Microsoft Visual Studio Code
 
